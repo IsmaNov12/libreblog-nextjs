@@ -59,9 +59,9 @@ export default function Navbar({ user }: NavbarProps) {
                   </linearGradient>
                   <filter id="glow">
                     <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                    <feMerge> 
+                    <feMerge>
                       <feMergeNode in="coloredBlur"/>
-                      <feMergeNode in="SourceGraphic"/> 
+                      <feMergeNode in="SourceGraphic"/>
                     </feMerge>
                   </filter>
                 </defs>
@@ -168,7 +168,7 @@ export default function Navbar({ user }: NavbarProps) {
                       <hr className="my-2 border-gray-200/50 mx-2" />
                       <button
                         onClick={handleLogout}
-                        className="flex items-center space-x-3 w-full px-4 py-3 text-sm text-red-600 hover:bg-red-50/80 hover:text-red-700 rounded-xl mx-2 transition-all duration-200 group"
+                        className="flex items-center space-x-3 px-4 py-3 text-sm text-red-600 hover:bg-red-50/80 hover:text-red-700 rounded-xl mx-2 transition-all duration-200 group cursor-pointer"
                       >
                         <LogOut className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
                         <span className="font-medium">Cerrar Sesión</span>
@@ -227,9 +227,9 @@ export default function Navbar({ user }: NavbarProps) {
                   </Link>
                 )
               })}
-              
+
               <hr className="my-3 border-gray-200/50 mx-2" />
-              
+
               {user ? (
                 <>
                   <div className="flex items-center space-x-3 px-4 py-4 border-b border-gray-200/50 mx-2 rounded-xl bg-gray-50/50">
@@ -263,7 +263,7 @@ export default function Navbar({ user }: NavbarProps) {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="px-2 py-2 space-y-1">
                     <Link
                       href={`/profile/${user.email.split('@')[0]}`}
@@ -286,7 +286,7 @@ export default function Navbar({ user }: NavbarProps) {
                         handleLogout()
                         setMobileMenuOpen(false)
                       }}
-                      className="flex items-center space-x-3 w-full px-4 py-3 text-sm text-red-600 hover:bg-red-50/80 hover:text-red-700 rounded-xl transition-all duration-200 group"
+                      className="flex items-center space-x-3 w-full px-4 py-3 text-sm text-red-600 hover:bg-red-50/80 hover:text-red-700 rounded-xl transition-all duration-200 group cursor-pointer"
                     >
                       <LogOut className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
                       <span className="font-medium">Cerrar Sesión</span>
